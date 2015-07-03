@@ -6,19 +6,19 @@ class sal_client (
         'Darwin':{
             mac_admin::osx_defaults { 'sal_server':
                 ensure => present,
-                domain => '/Library/Preferences/com.salsoftware.sal',
+                domain => '/Library/Preferences/com.github.salopensource.sal',
                 key    => 'ServerURL',
                 value  => $server,
             }
-        
+
             mac_admin::osx_defaults { 'sal_key':
                 ensure => present,
-                domain => '/Library/Preferences/com.salsoftware.sal',
+                domain => '/Library/Preferences/com.github.salopensource.sal',
                 key    => 'key',
                 value  => $key,
             }
-    
+
         }
     }
-    
+
 }
